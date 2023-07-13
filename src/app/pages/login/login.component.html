@@ -6,7 +6,7 @@
       </div>
       <div class="mb-3">
         <label class="block font-bold">Email</label>
-        <input type="email" placeholder="Enter The e-mail" class=" rounded px-4 py-2 w-full form-control" formControlName="email"
+        <input type="email" placeholder="Enter the e-mail" class=" rounded px-4 py-2 w-full form-control" formControlName="email"
             [ngClass]="{ 'is-invalid': submitted && validate.email.errors }">
         <div *ngIf="submitted && validate.email.errors" class="invalid-feedback" style="color: red;">
             <div *ngIf="validate.email.errors.required">Email is required*</div>
@@ -15,7 +15,7 @@
       </div>
       <div class="mb-3">
         <label class="block font-bold">Company Name</label>
-        <input type="text" placeholder="Enter The Company Name" class=" rounded px-4 py-2 w-full form-control" formControlName="company" 
+        <input type="text" placeholder="Enter the Company Name" class=" rounded px-4 py-2 w-full form-control" formControlName="company" 
         [ngClass]="{ 'is-invalid': submitted && validate.company.errors }" >
         <div *ngIf="submitted && validate.company.errors" class="invalid-feedback" style="color: red;">
           <div *ngIf="validate.company.errors.required"> Company Name is required*</div>
@@ -23,7 +23,7 @@
       </div>
       <div class="mb-3">
         <label class="block font-bold">Phone Number</label>
-        <input type="tel" placeholder="Enter The Phone Number" (keypress)="numberOnly($event)" class=" rounded px-4 py-2 w-full form-control" formControlName="phoneNumber"
+        <input type="tel" placeholder="Enter the Phone Number" (keypress)="numberOnly($event)" class="rounded px-4 py-2 w-full form-control" formControlName="phoneNumber"
         [ngClass]="{ 'is-invalid': submitted && validate.phoneNumber.errors }">
         <div *ngIf="submitted && validate.phoneNumber.errors" class="invalid-feedback" style="color: red;">
           <div *ngIf="validate.phoneNumber.errors.required">Phone Numberis required*</div>
@@ -31,11 +31,10 @@
       </div>
 
 
-      <div class="mb-3">
-        <div class="flex items-center">
-          <input class="form-checkbox border-gray-300 rounded" type="checkbox" formControlName="checkbox">
-          <label class="ml-2">Agree To Terms & Conditions</label>
-        </div>
+      <div class="mb-3 ml-4">
+          <input class="form-check-input form-checkbox" type="checkbox" formControlName="checkbox" [ngClass]="{ 'is-invalid': submitted && validate.checkbox.errors }">
+          <label class="form-check-label" for="flexCheckDefault">
+            Agree To Terms & Conditions</label>
       </div>
 
       <div class="flex justify-center">
@@ -47,10 +46,10 @@
   </div>
     <div class="flex flex-wrap justify-between">
       <div class="w-full sm:w-auto mb-4 sm:mb-0">
-        <button type="submit" class="bg-orange-400 text-white font-bold py-2 px-4 rounded-full w-full sm:w-40">Google</button>
+        <button type="submit" class="text-orange-400 font-bold py-2 px-4 w-full sm:w-40 rounded border-1 border-orange-300">Google</button>
       </div>
       <div class="w-full sm:w-auto">
-        <button type="submit" class="bg-orange-400 text-white font-bold py-2 px-4 rounded-full w-full sm:w-40">LinkedIn</button>
+        <button type="submit" class="text-orange-400 font-bold py-2 px-4 w-full sm:w-40 rounded border-1 border-orange-300">LinkedIn</button>
       </div>
     </div>
     

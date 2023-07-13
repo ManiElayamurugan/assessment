@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -20,10 +22,9 @@ export class LoginComponent {
       return false;
     }
     return true;
-
   }
 
-  constructor(private forms: FormBuilder,) {
+  constructor(private forms: FormBuilder, private toastr: ToastrService, private router: Router) {
 
   }
 
@@ -31,7 +32,8 @@ export class LoginComponent {
     this.loginForm = this.forms.group({
       email: ['', [Validators.required, Validators.email, Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
       company: ['', Validators.required],
-      phoneNumber: ['', Validators.required]
+      phoneNumber: ['', Validators.required],
+      checkbox: ['', [Validators.required]]
     })
   }
   get validate() {
@@ -40,16 +42,22 @@ export class LoginComponent {
 
   onSubmit() {
     this.submitted = true;
-    // this.value=this.loginForm.value.email
-    console.log(this.value)
-    console.log(this.loginForm.status)
+    if(this.loginForm.status === 'VALID'){
+    this.router.navigate(['/assessment'])
+      this.toastr.success("Login successfully")
+      console.log('registerForm',this.loginForm.value)
+      this.email = this.loginForm.value.email
+      this.company = this.loginForm.value.company
+      this.phoneNumber = this.loginForm.value.phoneNumber
+      localStorage.setItem('email', this.email);
+      localStorage.setItem('company', this.company);
+      localStorage.setItem('phoneNumber', this.phoneNumber);
+      this.submitted = false;
+      this.loginForm.reset();
+     }
+     else if(this.loginForm.status === 'INVALID') {
+      this.toastr.error('Please fill the required fields')
+     }
 
-
-    this.email = this.loginForm.value.email
-    this.company = this.loginForm.value.company
-    this.phoneNumber = this.loginForm.value.phoneNumber
-    localStorage.setItem('email', this.email);
-    localStorage.setItem('company', this.company);
-    localStorage.setItem('phoneNumber', this.phoneNumber);
   }
 }
