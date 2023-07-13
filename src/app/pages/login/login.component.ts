@@ -11,6 +11,8 @@ export class LoginComponent {
   submitted = false;
   email: any;
   value: any;
+  phoneNumber: any;
+  company: any;
 
   numberOnly(event: { which: any; keyCode: any; }): boolean {
     const charCode = (event.which) ? event.which : event.keyCode;
@@ -21,7 +23,7 @@ export class LoginComponent {
 
   }
 
-  constructor(private forms: FormBuilder, ) {
+  constructor(private forms: FormBuilder,) {
 
   }
 
@@ -29,18 +31,25 @@ export class LoginComponent {
     this.loginForm = this.forms.group({
       email: ['', [Validators.required, Validators.email, Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
       company: ['', Validators.required],
-      phoneNumber:['', Validators.required]
+      phoneNumber: ['', Validators.required]
     })
-}
-get validate() {
-  return this.loginForm.controls;
-}
+  }
+  get validate() {
+    return this.loginForm.controls;
+  }
 
-onSubmit() {
-  this.submitted = true;
-this.value=this.loginForm.value.email
-console.log(this.value)
-console.log(this.loginForm.status)
+  onSubmit() {
+    this.submitted = true;
+    // this.value=this.loginForm.value.email
+    console.log(this.value)
+    console.log(this.loginForm.status)
 
-}
+
+    this.email = this.loginForm.value.email
+    this.company = this.loginForm.value.company
+    this.phoneNumber = this.loginForm.value.phoneNumber
+    localStorage.setItem('email', this.email);
+    localStorage.setItem('password', this.company);
+    localStorage.setItem('confirmPassword', this.phoneNumber);
+  }
 }
