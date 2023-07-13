@@ -49,7 +49,7 @@ export class LoginComponent {
     this.company = this.loginForm.value.company
     this.phoneNumber = this.loginForm.value.phoneNumber
     localStorage.setItem('email', this.email);
-    localStorage.setItem('password', this.company);
-    localStorage.setItem('confirmPassword', this.phoneNumber);
+    localStorage.setItem('company', this.company);
+    localStorage.setItem('phoneNumber', this.phoneNumber);
   }
 }
