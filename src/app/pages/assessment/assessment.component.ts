@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./assessment.component.scss']
 })
 export class AssessmentComponent {
-
+  items = [
+    {
+      name: 'AWS',
+    }, 
+    {
+      name: 'Azure', 
+    },
+     {
+      name: 'GCP', 
+    }
+ ];
 }

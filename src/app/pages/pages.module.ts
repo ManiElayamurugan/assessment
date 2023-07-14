@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AssessmentComponent } from './assessment/assessment.component';
+import { NbCardModule, NbCheckboxModule, NbFormFieldModule, NbIconModule, NbInputModule, NbLayoutModule, NbListModule, NbThemeModule } from '@nebular/theme';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,14 @@ import { AssessmentComponent } from './assessment/assessment.component';
     PagesRoutingModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),
-    
+    NbThemeModule.forRoot({ name: 'default' }),
+    NbLayoutModule,
+    NbInputModule,
+    NbCheckboxModule,
+    NbCardModule,
+    NbListModule,
+    NbIconModule,
+    NbFormFieldModule
   ]
 })
 export class PagesModule { }
