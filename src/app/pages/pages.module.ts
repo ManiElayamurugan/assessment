@@ -8,6 +8,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AssessmentComponent } from './assessment/assessment.component';
 import { NbCardModule, NbCheckboxModule, NbFormFieldModule, NbIconModule, NbInputModule, NbLayoutModule, NbListModule, NbThemeModule } from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NbCardModule, NbCheckboxModule, NbFormFieldModule, NbIconModule, NbInpu
     NbCardModule,
     NbListModule,
     NbIconModule,
-    NbFormFieldModule
+    NbFormFieldModule,
+    NbEvaIconsModule
   ]
 })
 export class PagesModule { }
