@@ -4,7 +4,7 @@
           "id": "1.1",
           "code": "q2",
           "type": "choice",
-          "title": "What is the reason for your vist -1 1.1",
+          "title": "Assign Security contacts -1 1.1",
           "answer": [],
           "actions": [
             {
@@ -52,21 +52,32 @@
           ],
           "options": [
             {
-              "code": "General checkup",
-              "display": "General checkup",
+              "code": "100% Aligned - Coverage throughout the organization",
+              "display": "",
               "sequence": 1,
               "isCorrect": true
             },
             {
-              "code": "Pregnancy",
-              "display": "Pregnancy",
+              "code": "75% Aligned - Partial Coverage - Advanced",
+              "display": "",
               "sequence": 2,
               "isCorrect": true
             },
             {
-              "code": "Diabetics",
-              "display": "Diabetics",
+              "code": "50% Aligned - Partial Coverage - Medium",
+              "display": "",
               "sequence": 3,
+              "isCorrect": true
+            },
+            {
+              "code": "25% Aligned - Partial Coverage - Basic",
+              "display": "",
+              "sequence": 4,
+              "isCorrect": true
+            }, {
+              "code": "0% Aligned - Not Aligned",
+              "display": "",
+              "sequence": 5,
               "isCorrect": true
             }
           ],
@@ -80,7 +91,7 @@
           "id": "1.2",
           "code": "q2",
           "type": "choice",
-          "title": "What is the result of general checkup --2 1.2",
+          "title": "Select the region(s) --2 1.2",
           "answer": [],
           "actions": [
             {
@@ -114,15 +125,32 @@
           ],
           "options": [
             {
-              "code": "Normal",
-              "display": "Normal",
+              "code": "100% Aligned - Coverage throughout the organization",
+              "display": "",
               "sequence": 1,
               "isCorrect": true
             },
             {
-              "code": "Any specific parts of the body",
-              "display": "Any specific parts of the body",
+              "code": "75% Aligned - Partial Coverage - Advanced",
+              "display": "",
               "sequence": 2,
+              "isCorrect": true
+            },
+            {
+              "code": "50% Aligned - Partial Coverage - Medium",
+              "display": "",
+              "sequence": 3,
+              "isCorrect": true
+            },
+            {
+              "code": "25% Aligned - Partial Coverage - Basic",
+              "display": "",
+              "sequence": 4,
+              "isCorrect": true
+            }, {
+              "code": "0% Aligned - Not Aligned",
+              "display": "",
+              "sequence": 5,
               "isCorrect": true
             }
           ],
@@ -136,7 +164,7 @@
           "id": "1.5",
           "code": "q2",
           "type": "choice",
-          "title": "In which part did you take checkup --5 1.5",
+          "title": "Automate alignment with best practices using AWS Security Hub --5 1.5",
           "answer": [],
           "actions": [
             {
@@ -212,33 +240,38 @@
           ],
           "options": [
             {
-              "code": "Ear",
-              "display": "Ear",
+              "code": "100% Aligned - Coverage throughout the organization",
+              "display": "",
               "sequence": 1,
               "isCorrect": true
             },
             {
-              "code": "Nose",
-              "display": "Nose",
+              "code": "75% Aligned - Partial Coverage - Advanced",
+              "display": "",
               "sequence": 2,
               "isCorrect": true
             },
             {
-              "code": "Kidney",
-              "display": "Kidney",
+              "code": "50% Aligned - Partial Coverage - Medium",
+              "display": "",
               "sequence": 3,
               "isCorrect": true
             },
             {
-              "code": "Heart",
-              "display": "Heart",
+              "code": "25% Aligned - Partial Coverage - Basic",
+              "display": "",
               "sequence": 4,
+              "isCorrect": true
+            }, {
+              "code": "0% Aligned - Not Aligned",
+              "display": "",
+              "sequence": 5,
               "isCorrect": true
             }
           ],
           "sequence": 2,
           "settings": {
-            "multiple": true,
+            "multiple": false,
             "required": true
           }
         },
@@ -246,7 +279,7 @@
           "id": "1.7",
           "code": "q2",
           "type": "choice",
-          "title": "Have you did any surgery --7 1.7",
+          "title": "Identify security and regulatory requirements --7 1.7",
           "answer": [],
           "actions": [
             {
@@ -291,15 +324,32 @@
           ],
           "options": [
             {
-              "code": "Yes",
-              "display": "Yes",
+              "code": "100% Aligned - Coverage throughout the organization",
+              "display": "",
               "sequence": 1,
               "isCorrect": true
             },
             {
-              "code": "No",
-              "display": "No",
+              "code": "75% Aligned - Partial Coverage - Advanced",
+              "display": "",
               "sequence": 2,
+              "isCorrect": true
+            },
+            {
+              "code": "50% Aligned - Partial Coverage - Medium",
+              "display": "",
+              "sequence": 3,
+              "isCorrect": true
+            },
+            {
+              "code": "25% Aligned - Partial Coverage - Basic",
+              "display": "",
+              "sequence": 4,
+              "isCorrect": true
+            }, {
+              "code": "0% Aligned - Not Aligned",
+              "display": "",
+              "sequence": 5,
               "isCorrect": true
             }
           ],
@@ -313,7 +363,7 @@
           "id": "1.8",
           "code": "q2",
           "type": "choice",
-          "title": "As of now what is your pregancy month --8 1.8",
+          "title": "Cloud Security Training Plan --8 1.8",
           "answer": [],
           "actions": [
             {
@@ -361,334 +411,32 @@
           ],
           "options": [
             {
-              "code": "1-5",
-              "display": "1-5",
+              "code": "100% Aligned - Coverage throughout the organization",
+              "display": "",
               "sequence": 1,
               "isCorrect": true
             },
             {
-              "code": "6-10",
-              "display": "6-10",
-              "sequence": 2,
-              "isCorrect": true
-            }
-          ],
-          "sequence": 2,
-          "settings": {
-            "multiple": false,
-            "required": true
-          }
-        },
-        {
-          "id": "1.9",
-          "code": "q2",
-          "type": "choice",
-          "title": "Have you taken monthly checkup and scans --10 1.9",
-          "answer": [],
-          "actions": [
-            {
-              "type": "question",
-              "rules": [
-                {
-                  "type": "question",
-                  "value": "Yes",
-                  "operator": "equals",
-                  "questionId": "1.9"
-                }
-              ],
-              "action": "TriggerQuestion",
-              "sequence": 1,
-              "questionId": 1.1
-            },
-            {
-              "type": "question",
-              "rules": [
-                {
-                  "type": "question",
-                  "value": "Yes",
-                  "operator": "equals",
-                  "questionId": "1.10"
-                }
-              ],
-              "action": "MessageToPatient",
-              "message": "Thanks for your valuable answers",
-              "sequence": 1
-            },
-            {
-              "type": "question",
-              "rules": [
-                {
-                  "type": "question",
-                  "value": "No",
-                  "operator": "equals",
-                  "questionId": "1.10"
-                }
-              ],
-              "action": "MessageToPatient",
-              "message": "Please do monthly checkup",
-              "sequence": 2
-            }
-          ],
-          "options": [
-            {
-              "code": "Yes",
-              "display": "Yes",
-              "sequence": 1,
-              "isCorrect": true
-            },
-            {
-              "code": "No",
-              "display": "No",
-              "sequence": 2,
-              "isCorrect": true
-            }
-          ],
-          "sequence": 2,
-          "settings": {
-            "multiple": false,
-            "required": true
-          }
-        },
-        {
-          "id": "1.11",
-          "code": "q2",
-          "type": "choice",
-          "title": "Did your family members have diabetics --11 1.11",
-          "answer": [],
-          "actions": [],
-          "options": [
-            {
-              "code": "Yes",
-              "display": "Yes",
-              "sequence": 1,
-              "isCorrect": true
-            },
-            {
-              "code": "No",
-              "display": "No",
-              "sequence": 2,
-              "isCorrect": true
-            }
-          ],
-          "sequence": 2,
-          "settings": {
-            "multiple": false,
-            "required": true
-          }
-        },
-        {
-          "id": "1.12",
-          "code": "q2",
-          "type": "choice",
-          "title": "How many years do you have diabetics --12 1.12",
-          "answer": [],
-          "actions": [
-            {
-              "type": "question",
-              "rules": [
-                {
-                  "type": "question",
-                  "value": "Above 5 years",
-                  "operator": "equals",
-                  "questionId": "1.12"
-                }
-              ],
-              "action": "MessageToPatient",
-              "message": "It is a starting stage so please do some exercise",
-              "sequence": 1
-            },
-            {
-              "type": "question",
-              "rules": [
-                {
-                  "type": "question",
-                  "value": "Above 10 years",
-                  "operator": "equals",
-                  "questionId": "1.12"
-                }
-              ],
-              "action": "MessageToPatient",
-              "message": "It is middle level you should follow doctor prescription",
-              "sequence": 2
-            },
-            {
-              "type": "question",
-              "rules": [
-                {
-                  "type": "question",
-                  "value": "Above 15 years",
-                  "operator": "equals",
-                  "questionId": "1.15"
-                }
-              ],
-              "action": "MessageToPatient",
-              "message": "You should admit in hospital",
-              "sequence": 3
-            }
-          ],
-          "options": [
-            {
-              "code": "Above 5 years",
-              "display": "Above 5 years",
-              "sequence": 1,
-              "isCorrect": true
-            },
-            {
-              "code": "Above 10 years",
-              "display": "Above 10 years",
+              "code": "75% Aligned - Partial Coverage - Advanced",
+              "display": "",
               "sequence": 2,
               "isCorrect": true
             },
             {
-              "code": "Above 15 years",
-              "display": "Above 15 years",
+              "code": "50% Aligned - Partial Coverage - Medium",
+              "display": "",
               "sequence": 3,
               "isCorrect": true
-            }
-          ],
-          "sequence": 2,
-          "settings": {
-            "multiple": true,
-            "required": true
-          }
-        },
-        {
-          "id": "1.15",
-          "code": "q2",
-          "type": "choice",
-          "title": "What kind of medicine are you taking --15 1.15",
-          "answer": [],
-          "actions": [
-            {
-              "type": "question",
-              "rules": [
-                {
-                  "type": "question",
-                  "value": "Injection",
-                  "operator": "equals",
-                  "questionId": "1.13"
-                }
-              ],
-              "action": "MessageToPatient",
-              "message": "Are you having doctors prescription",
-              "sequence": 1
             },
             {
-              "type": "question",
-              "rules": [
-                {
-                  "type": "question",
-                  "value": "Tablet",
-                  "operator": "equals",
-                  "questionId": "1.13"
-                }
-              ],
-              "action": "MessageToPatient",
-              "message": "Please continue",
-              "sequence": 2
-            },
-            {
-              "type": "question",
-              "rules": [
-                {
-                  "type": "question",
-                  "value": "None of the above",
-                  "operator": "equals",
-                  "questionId": "1.13"
-                }
-              ],
-              "action": "MessageToPatient",
-              "message": "Please follow the above option",
-              "sequence": 3
-            }
-          ],
-          "options": [
-            {
-              "code": "Injection",
-              "display": "Injection",
-              "sequence": 1,
+              "code": "25% Aligned - Partial Coverage - Basic",
+              "display": "",
+              "sequence": 4,
               "isCorrect": true
-            },
-            {
-              "code": "Tablet",
-              "display": "Tablet",
-              "sequence": 2,
-              "isCorrect": true
-            },
-            {
-              "code": "None of the above",
-              "display": "None of the above",
-              "sequence": 3,
-              "isCorrect": true
-            }
-          ],
-          "sequence": 2,
-          "settings": {
-            "multiple": true,
-            "required": true
-          }
-        },
-        {
-          "id": "1.13",
-          "code": "q2",
-          "type": "choice",
-          "title": "Do you have any vomiting sensation --13 1.13",
-          "answer": [],
-          "actions": [
-            {
-              "type": "question",
-              "rules": [
-                {
-                  "type": "question",
-                  "value": "Yes",
-                  "operator": "equals",
-                  "questionId": "1.13"
-                }
-              ],
-              "action": "MessageToPatient",
-              "sequence": 1,
-              "message": "please take tablets"
-            },
-            {
-              "type": "question",
-              "rules": [
-                {
-                  "type": "question",
-                  "value": "Yes",
-                  "operator": "equals",
-                  "questionId": "1.13"
-                }
-              ],
-              "action": "MessageToPatient",
-              "message": "Please visit nearby clinic",
-              "sequence": 1
-            },
-            {
-              "type": "question",
-              "rules": [
-                {
-                  "type": "question",
-                  "value": "No",
-                  "operator": "equals",
-                  "questionId": "1.9"
-                }
-              ],
-              "action": "MessageToPatient",
-              "message": "Thank you for your valuable answers",
-              "sequence": 2
-            }
-          ],
-          "options": [
-            {
-              "code": "Yes",
-              "display": "Yes",
-              "sequence": 1,
-              "isCorrect": true
-            },
-            {
-              "code": "No",
-              "display": "No",
-              "sequence": 2,
+            }, {
+              "code": "0% Aligned - Not Aligned",
+              "display": "",
+              "sequence": 5,
               "isCorrect": true
             }
           ],
