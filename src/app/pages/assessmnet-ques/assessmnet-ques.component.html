@@ -1,0 +1,22 @@
+
+<nb-layout class="h-screen">
+    <nb-layout-column class="flex items-center justify-center bg-stone-900">
+      <div class="flex flex-col items-center max-w-md w-full p-6 bg-white rounded-lg shadow-2xl">
+        <h5 class="text-center">Choose an Category</h5>
+        <nb-form-field class="w-full mt-4">
+          <input class="inputStyle" [type]="'text'" nbInput fieldSize="medium" nbInput 
+          [(ngModel)]="searchText"
+          (ngModelChange)="onSearchChange($event)"
+          placeholder="Search"/>
+          <nb-icon nbPrefix [icon]="'search-outline'" pack="eva"></nb-icon>
+        </nb-form-field>
+        <nb-list class="mt-4 w-full cursor-pointer" (click)="showQuestions()">
+          <nb-list-item *ngFor="let item of items"  class="border-2 my-3">
+            - {{ item.name }}
+          </nb-list-item>
+        </nb-list>
+      </div>
+    </nb-layout-column>
+  </nb-layout>
+  
+  

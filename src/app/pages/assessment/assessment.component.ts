@@ -29,7 +29,7 @@ export class AssessmentComponent implements OnInit {
  }
 
  showQuestions(){
-  this.router.navigate(['/questions']);
+  this.router.navigate(['/assess-ques']);
   console.log('++++++++++',this.router);
  }
 

@@ -10,12 +10,14 @@ import { AssessmentComponent } from './assessment/assessment.component';
 import { NbButtonModule, NbCardModule, NbCheckboxModule, NbFormFieldModule, NbIconModule, NbInputModule, NbLayoutModule, NbListModule, NbRadioModule, NbThemeModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AssessmentsQuestionsComponent } from './assessments-questions/assessments-questions.component';
+import { AssessmnetQuesComponent } from './assessmnet-ques/assessmnet-ques.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
     AssessmentComponent,
-    AssessmentsQuestionsComponent
+    AssessmentsQuestionsComponent,
+    AssessmnetQuesComponent
   ],
   imports: [
     CommonModule,
