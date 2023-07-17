@@ -3,20 +3,23 @@ import { CommonModule } from '@angular/common';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { LoginComponent } from './login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AssessmentComponent } from './assessment/assessment.component';
-import { NbCardModule, NbCheckboxModule, NbFormFieldModule, NbIconModule, NbInputModule, NbLayoutModule, NbListModule, NbThemeModule } from '@nebular/theme';
+import { NbButtonModule, NbCardModule, NbCheckboxModule, NbFormFieldModule, NbIconModule, NbInputModule, NbLayoutModule, NbListModule, NbRadioModule, NbThemeModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { AssessmentsQuestionsComponent } from './assessments-questions/assessments-questions.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
-    AssessmentComponent
+    AssessmentComponent,
+    AssessmentsQuestionsComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
     PagesRoutingModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),
@@ -28,7 +31,9 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbListModule,
     NbIconModule,
     NbFormFieldModule,
-    NbEvaIconsModule
+    NbEvaIconsModule,
+    NbButtonModule,
+    NbRadioModule
   ]
 })
 export class PagesModule { }

@@ -4,6 +4,7 @@
       <div class="text-center text-orange-400">
         <h1>Login</h1>
       </div>
+
       <div class="mb-3">
         <label class="block font-bold">Email</label>
         <input type="email" placeholder="Enter the e-mail" class=" rounded px-4 py-2 w-full form-control" formControlName="email"
@@ -13,6 +14,7 @@
             <div *ngIf="validate.email.errors.email">Email must be a valid email address</div>
         </div>
       </div>
+
       <div class="mb-3">
         <label class="block font-bold">Company Name</label>
         <input type="text" placeholder="Enter the Company Name" class=" rounded px-4 py-2 w-full form-control" formControlName="company" 
@@ -21,6 +23,7 @@
           <div *ngIf="validate.company.errors.required"> Company Name is required*</div>
       </div>
       </div>
+
       <div class="mb-3">
         <label class="block font-bold">Phone Number</label>
         <input type="tel" placeholder="Enter the Phone Number" (keypress)="numberOnly($event)" class="rounded px-4 py-2 w-full form-control" formControlName="phoneNumber"
@@ -29,7 +32,6 @@
           <div *ngIf="validate.phoneNumber.errors.required">Phone Numberis required*</div>
       </div>
       </div>
-
 
       <div class="mb-3 ml-4">
           <input class="form-check-input form-checkbox" type="checkbox" formControlName="checkbox" [ngClass]="{ 'is-invalid': submitted && validate.checkbox.errors }">
@@ -55,3 +57,4 @@
     
   </div>
 </div>
+

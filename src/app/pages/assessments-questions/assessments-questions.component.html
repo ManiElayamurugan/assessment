@@ -1,0 +1,23 @@
+<nb-layout class="h-screen">
+  <nb-layout-column class="flex items-center justify-center bg-stone-900">
+    <div class="flex flex-col items-center max-w-md w-full p-6 bg-white rounded-lg shadow-2xl">
+      <div *ngIf="currentQuestionIndex !== undefined">
+        <div *ngFor="let item of [assessmentListArray[currentQuestionIndex]]">
+          <p>{{ item?.title }}</p>
+          <div *ngFor="let option of item?.options">
+            <div *ngIf="item.settings?.multiple  == true">
+            <nb-checkbox>{{ option?.code }}</nb-checkbox>
+          </div>
+          </div>
+
+          <div *ngFor="let option of item?.options">
+            <div *ngIf="item.settings?.multiple  == false">
+            <nb-radio>{{ option?.code }}</nb-radio>
+          </div>
+          </div>
+          <button (click)="nextQuestion()" nbButton>Next</button>
+        </div>
+      </div>
+    </div>
+  </nb-layout-column>
+</nb-layout>

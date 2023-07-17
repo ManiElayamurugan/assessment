@@ -58,6 +58,5 @@ export class LoginComponent {
      else if(this.loginForm.status === 'INVALID') {
       this.toastr.error('Please fill the required fields')
      }
-
   }
 }

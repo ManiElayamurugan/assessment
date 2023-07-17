@@ -1,0 +1,702 @@
+{
+    "items": [
+        {
+          "id": "1.1",
+          "code": "q2",
+          "type": "choice",
+          "title": "What is the reason for your vist -1 1.1",
+          "answer": [],
+          "actions": [
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "General checkup",
+                  "operator": "equals",
+                  "questionId": "1.2"
+                }
+              ],
+              "action": "TriggerQuestion",
+              "sequence": 2,
+              "questionId": 1.2
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Pregnancy",
+                  "operator": "equals",
+                  "questionId": "1.2"
+                }
+              ],
+              "action": "TriggerQuestion",
+              "sequence": 2,
+              "questionId": 1.8
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Diabetics",
+                  "operator": "equals",
+                  "questionId": "1.1"
+                }
+              ],
+              "action": "TriggerQuestion",
+              "sequence": 3,
+              "questionId": 1.11
+            }
+          ],
+          "options": [
+            {
+              "code": "General checkup",
+              "display": "General checkup",
+              "sequence": 1,
+              "isCorrect": true
+            },
+            {
+              "code": "Pregnancy",
+              "display": "Pregnancy",
+              "sequence": 2,
+              "isCorrect": true
+            },
+            {
+              "code": "Diabetics",
+              "display": "Diabetics",
+              "sequence": 3,
+              "isCorrect": true
+            }
+          ],
+          "sequence": 2,
+          "settings": {
+            "multiple": false,
+            "required": true
+          }
+        },
+        {
+          "id": "1.2",
+          "code": "q2",
+          "type": "choice",
+          "title": "What is the result of general checkup --2 1.2",
+          "answer": [],
+          "actions": [
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Any specific parts of the body",
+                  "operator": "equals",
+                  "questionId": "1.2"
+                }
+              ],
+              "action": "TriggerQuestion",
+              "sequence": 1,
+              "questionId": 1.5
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Normal",
+                  "operator": "equals",
+                  "questionId": "1.2"
+                }
+              ],
+              "action": "TriggerQuestion",
+              "sequence": 2,
+              "questionId": 1.14
+            }
+          ],
+          "options": [
+            {
+              "code": "Normal",
+              "display": "Normal",
+              "sequence": 1,
+              "isCorrect": true
+            },
+            {
+              "code": "Any specific parts of the body",
+              "display": "Any specific parts of the body",
+              "sequence": 2,
+              "isCorrect": true
+            }
+          ],
+          "sequence": 2,
+          "settings": {
+            "multiple": false,
+            "required": true
+          }
+        },
+        {
+          "id": "1.5",
+          "code": "q2",
+          "type": "choice",
+          "title": "In which part did you take checkup --5 1.5",
+          "answer": [],
+          "actions": [
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Ear",
+                  "operator": "equals",
+                  "questionId": "1.5"
+                }
+              ],
+              "action": "MessageToPatient",
+              "message": "Kindly check the ear specialist",
+              "sequence": 1
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Nose",
+                  "operator": "equals",
+                  "questionId": "1.5"
+                }
+              ],
+              "action": "MessageToPatient",
+              "message": "Kindly check the nose specialist",
+              "sequence": 2
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Kidney",
+                  "operator": "equals",
+                  "questionId": "1.5"
+                }
+              ],
+              "action": "MessageToPatient",
+              "message": "Eat healthy foods and check the abdomen specialist",
+              "sequence": 3
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Heart",
+                  "operator": "equals",
+                  "questionId": "1.5"
+                }
+              ],
+              "action": "TriggerQuestion",
+              "sequence": 4,
+              "questionId": 1.7
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Heart",
+                  "operator": "equals",
+                  "questionId": "1.5"
+                }
+              ],
+              "action": "MessageToPatient",
+              "message": "You should console a doctor",
+              "sequence": 3
+            }
+          ],
+          "options": [
+            {
+              "code": "Ear",
+              "display": "Ear",
+              "sequence": 1,
+              "isCorrect": true
+            },
+            {
+              "code": "Nose",
+              "display": "Nose",
+              "sequence": 2,
+              "isCorrect": true
+            },
+            {
+              "code": "Kidney",
+              "display": "Kidney",
+              "sequence": 3,
+              "isCorrect": true
+            },
+            {
+              "code": "Heart",
+              "display": "Heart",
+              "sequence": 4,
+              "isCorrect": true
+            }
+          ],
+          "sequence": 2,
+          "settings": {
+            "multiple": true,
+            "required": true
+          }
+        },
+        {
+          "id": "1.7",
+          "code": "q2",
+          "type": "choice",
+          "title": "Have you did any surgery --7 1.7",
+          "answer": [],
+          "actions": [
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Yes",
+                  "operator": "equals",
+                  "questionId": "1.7"
+                }
+              ]
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Yes",
+                  "operator": "equals",
+                  "questionId": "1.7"
+                }
+              ],
+              "action": "MessageToPatient",
+              "message": "Please visit clinic",
+              "sequence": 1
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "No",
+                  "operator": "equals",
+                  "questionId": "1.7"
+                }
+              ],
+              "action": "MessageToPatient",
+              "message": "Its not a problem kindly take healthy foods",
+              "sequence": 2
+            }
+          ],
+          "options": [
+            {
+              "code": "Yes",
+              "display": "Yes",
+              "sequence": 1,
+              "isCorrect": true
+            },
+            {
+              "code": "No",
+              "display": "No",
+              "sequence": 2,
+              "isCorrect": true
+            }
+          ],
+          "sequence": 2,
+          "settings": {
+            "multiple": false,
+            "required": true
+          }
+        },
+        {
+          "id": "1.8",
+          "code": "q2",
+          "type": "choice",
+          "title": "As of now what is your pregancy month --8 1.8",
+          "answer": [],
+          "actions": [
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "1-5",
+                  "operator": "equals",
+                  "questionId": "1.8"
+                }
+              ],
+              "action": "TriggerQuestion",
+              "sequence": 4,
+              "questionId": 1.13
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "1-5",
+                  "operator": "equals",
+                  "questionId": "1.8"
+                }
+              ],
+              "action": "MessageToPatient",
+              "message": "Good, take healthy foods",
+              "sequence": 1
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "6-10",
+                  "operator": "equals",
+                  "questionId": "1.8"
+                }
+              ],
+              "action": "MessageToPatient",
+              "message": "Take care, please do healthy exercise",
+              "sequence": 2
+            }
+          ],
+          "options": [
+            {
+              "code": "1-5",
+              "display": "1-5",
+              "sequence": 1,
+              "isCorrect": true
+            },
+            {
+              "code": "6-10",
+              "display": "6-10",
+              "sequence": 2,
+              "isCorrect": true
+            }
+          ],
+          "sequence": 2,
+          "settings": {
+            "multiple": false,
+            "required": true
+          }
+        },
+        {
+          "id": "1.9",
+          "code": "q2",
+          "type": "choice",
+          "title": "Have you taken monthly checkup and scans --10 1.9",
+          "answer": [],
+          "actions": [
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Yes",
+                  "operator": "equals",
+                  "questionId": "1.9"
+                }
+              ],
+              "action": "TriggerQuestion",
+              "sequence": 1,
+              "questionId": 1.1
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Yes",
+                  "operator": "equals",
+                  "questionId": "1.10"
+                }
+              ],
+              "action": "MessageToPatient",
+              "message": "Thanks for your valuable answers",
+              "sequence": 1
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "No",
+                  "operator": "equals",
+                  "questionId": "1.10"
+                }
+              ],
+              "action": "MessageToPatient",
+              "message": "Please do monthly checkup",
+              "sequence": 2
+            }
+          ],
+          "options": [
+            {
+              "code": "Yes",
+              "display": "Yes",
+              "sequence": 1,
+              "isCorrect": true
+            },
+            {
+              "code": "No",
+              "display": "No",
+              "sequence": 2,
+              "isCorrect": true
+            }
+          ],
+          "sequence": 2,
+          "settings": {
+            "multiple": false,
+            "required": true
+          }
+        },
+        {
+          "id": "1.11",
+          "code": "q2",
+          "type": "choice",
+          "title": "Did your family members have diabetics --11 1.11",
+          "answer": [],
+          "actions": [],
+          "options": [
+            {
+              "code": "Yes",
+              "display": "Yes",
+              "sequence": 1,
+              "isCorrect": true
+            },
+            {
+              "code": "No",
+              "display": "No",
+              "sequence": 2,
+              "isCorrect": true
+            }
+          ],
+          "sequence": 2,
+          "settings": {
+            "multiple": false,
+            "required": true
+          }
+        },
+        {
+          "id": "1.12",
+          "code": "q2",
+          "type": "choice",
+          "title": "How many years do you have diabetics --12 1.12",
+          "answer": [],
+          "actions": [
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Above 5 years",
+                  "operator": "equals",
+                  "questionId": "1.12"
+                }
+              ],
+              "action": "MessageToPatient",
+              "message": "It is a starting stage so please do some exercise",
+              "sequence": 1
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Above 10 years",
+                  "operator": "equals",
+                  "questionId": "1.12"
+                }
+              ],
+              "action": "MessageToPatient",
+              "message": "It is middle level you should follow doctor prescription",
+              "sequence": 2
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Above 15 years",
+                  "operator": "equals",
+                  "questionId": "1.15"
+                }
+              ],
+              "action": "MessageToPatient",
+              "message": "You should admit in hospital",
+              "sequence": 3
+            }
+          ],
+          "options": [
+            {
+              "code": "Above 5 years",
+              "display": "Above 5 years",
+              "sequence": 1,
+              "isCorrect": true
+            },
+            {
+              "code": "Above 10 years",
+              "display": "Above 10 years",
+              "sequence": 2,
+              "isCorrect": true
+            },
+            {
+              "code": "Above 15 years",
+              "display": "Above 15 years",
+              "sequence": 3,
+              "isCorrect": true
+            }
+          ],
+          "sequence": 2,
+          "settings": {
+            "multiple": true,
+            "required": true
+          }
+        },
+        {
+          "id": "1.15",
+          "code": "q2",
+          "type": "choice",
+          "title": "What kind of medicine are you taking --15 1.15",
+          "answer": [],
+          "actions": [
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Injection",
+                  "operator": "equals",
+                  "questionId": "1.13"
+                }
+              ],
+              "action": "MessageToPatient",
+              "message": "Are you having doctors prescription",
+              "sequence": 1
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Tablet",
+                  "operator": "equals",
+                  "questionId": "1.13"
+                }
+              ],
+              "action": "MessageToPatient",
+              "message": "Please continue",
+              "sequence": 2
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "None of the above",
+                  "operator": "equals",
+                  "questionId": "1.13"
+                }
+              ],
+              "action": "MessageToPatient",
+              "message": "Please follow the above option",
+              "sequence": 3
+            }
+          ],
+          "options": [
+            {
+              "code": "Injection",
+              "display": "Injection",
+              "sequence": 1,
+              "isCorrect": true
+            },
+            {
+              "code": "Tablet",
+              "display": "Tablet",
+              "sequence": 2,
+              "isCorrect": true
+            },
+            {
+              "code": "None of the above",
+              "display": "None of the above",
+              "sequence": 3,
+              "isCorrect": true
+            }
+          ],
+          "sequence": 2,
+          "settings": {
+            "multiple": true,
+            "required": true
+          }
+        },
+        {
+          "id": "1.13",
+          "code": "q2",
+          "type": "choice",
+          "title": "Do you have any vomiting sensation --13 1.13",
+          "answer": [],
+          "actions": [
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Yes",
+                  "operator": "equals",
+                  "questionId": "1.13"
+                }
+              ],
+              "action": "MessageToPatient",
+              "sequence": 1,
+              "message": "please take tablets"
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "Yes",
+                  "operator": "equals",
+                  "questionId": "1.13"
+                }
+              ],
+              "action": "MessageToPatient",
+              "message": "Please visit nearby clinic",
+              "sequence": 1
+            },
+            {
+              "type": "question",
+              "rules": [
+                {
+                  "type": "question",
+                  "value": "No",
+                  "operator": "equals",
+                  "questionId": "1.9"
+                }
+              ],
+              "action": "MessageToPatient",
+              "message": "Thank you for your valuable answers",
+              "sequence": 2
+            }
+          ],
+          "options": [
+            {
+              "code": "Yes",
+              "display": "Yes",
+              "sequence": 1,
+              "isCorrect": true
+            },
+            {
+              "code": "No",
+              "display": "No",
+              "sequence": 2,
+              "isCorrect": true
+            }
+          ],
+          "sequence": 2,
+          "settings": {
+            "multiple": false,
+            "required": true
+          }
+        }
+      ]
+}
