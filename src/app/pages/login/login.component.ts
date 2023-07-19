@@ -43,7 +43,7 @@ export class LoginComponent {
   onSubmit() {
     this.submitted = true;
     if(this.loginForm.status === 'VALID'){
-    this.router.navigate(['/assessment'])
+      this.router.navigate(['/assessment'])
       this.toastr.success("Login successfully")
       console.log('registerForm',this.loginForm.value)
       this.email = this.loginForm.value.email

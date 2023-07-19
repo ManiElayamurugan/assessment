@@ -13,6 +13,9 @@ export class AssessmentsQuestionsComponent implements OnInit {
   currentQuestionIndex = 0;
   indexOfPrevious?: number;
   optionArr: any = [];
+  selectedOption?: false;
+  innerText: any;
+  showContent?: boolean = false;
 
   constructor(private assessmentService: AssessmentService) { }
 
@@ -34,5 +37,14 @@ export class AssessmentsQuestionsComponent implements OnInit {
 
   nextQuestion() {
     this.currentQuestionIndex++
+    this.showContent = false
+  }
+  onCheck(event: any){
+console.log('++++++++',event)
+this.innerText  = event.target.innerText
+console.log('-------', this.innerText)
+if(this.innerText != ''){
+  this.showContent = true;
+}
   }
 }
