@@ -17,8 +17,11 @@
         <nb-card-footer class="bg-white" *ngIf="currentQuestionIndex !== undefined">
           <div class="row">
             <div class="col-12 flex justify-end">
-              <img src="../../../assets/images/restart.png" class="img-fluid">
-              <button type="submit" size="medium" class="mx-3 float-end" nbButton style="width: 90px">Perv</button>
+              <button>
+                <img src="../../../assets/images/restart.png" class="img-fluid" (click)="restart()">
+
+              </button>
+              <button type="submit" size="medium" class="mx-3 float-end" nbButton (click)="previousQuestion()" style="width: 90px">Perv</button>
               <button type="submit" size="medium" class="float-end" nbButton (click)="nextQuestion()" status="info" [disabled]="!showContent">
                 Next
               </button>

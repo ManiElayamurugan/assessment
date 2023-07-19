@@ -47,4 +47,13 @@ if(this.innerText != ''){
   this.showContent = true;
 }
   }
+  previousQuestion() {
+    if (this.currentQuestionIndex > 0) {
+      this.currentQuestionIndex--;
+    }
+  }
+  restart(){
+    this.currentQuestionIndex = 0;
+    this.selectedOption 
+  }
 }
