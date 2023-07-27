@@ -1,0 +1,82 @@
+.twilight{
+    font-weight: 600;
+    font-size: 40px;
+}
+.full-img{
+    background-image: url('../../../assets/images/Background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form-class{
+    background-color: #F6F6F6;
+    border:none;
+}
+.divider-text {
+    position: relative;
+    text-align: center;
+    // margin-top: 15px;
+    // margin-bottom: 15px;
+}
+.divider-text span {
+    padding: 7px;
+    font-size: 12px;
+    position: relative;
+    z-index: 2;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #D8D8D8;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+}
+// .input-with-icon {
+//     position: relative;
+//   }
+  
+//   .form-control {
+//     padding-right: 40px; /* Adjust padding to create space for the image */
+//     background-image: none; /* Clear default background image */
+//   }
+  
+//   .input-icon {
+//     position: absolute;
+//     top: 50%;
+//     right: 10px;
+//     transform: translateY(-50%);
+//     width: 20px; /* Adjust the width of the image */
+//     height: 20px; /* Adjust the height of the image */
+//   }
+  
+#name {
+    // / width: 308px; /
+    background-image: url('../../../assets/images/Mail.png');
+    background-repeat: no-repeat;
+    background-position: bottom 14px right 13px;
+    height: 47px;
+    padding: 6px 5px 7px 8px;
+}
+#company{
+    background-image: url('../../../assets/images/Company.png');
+    background-repeat: no-repeat;
+    background-position: bottom 14px right 13px;
+    height: 47px;
+    padding: 6px 5px 7px 8px;
+}
+#contacts{
+    background-image: url('../../../assets/images/Phone.png');
+    background-repeat: no-repeat;
+    background-position: bottom 14px right 13px;
+    height: 47px;
+    padding: 6px 5px 7px 8px;
+}
+
+.text{
+    color:  #A9A9A9;
+}
+.text-color {
+color:#595959;
+}

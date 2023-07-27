@@ -59,4 +59,5 @@ export class LoginComponent {
       this.toastr.error('Please fill the required fields')
      }
   }
+  
 }

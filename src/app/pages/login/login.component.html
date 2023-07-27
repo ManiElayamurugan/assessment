@@ -1,4 +1,4 @@
-<div class="flex items-center justify-center min-h-screen bg-orange-400">
+<!-- <div class="flex items-center justify-center min-h-screen bg-orange-400">
   <div class="max-w-md w-full p-6 bg-white shadow-2xl">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="space-y-4">
       <div class="text-center text-orange-400">
@@ -56,5 +56,103 @@
     </div>
     
   </div>
-</div>
+</div> -->
 
+
+<div class="row m-0 ">
+  <div class="col-xl-10 col-lg-10 col-md-11 col-11 mx-auto">
+    <div class="row pt-5">
+      <div class="col-xl-9 col-lg-8 col-lg-12 col-md-12 col-12">
+        <img src="../../../assets/images/twilight.png" style="width: 35%;">
+        <div class="row">
+          <!-- <div class="col-xl-4 col-md-5 pt-4 mt-4 col-lg-4 col-12 "
+            style="background-image: url('../../../assets/images/Background.png'); background-size: cover; height: 475px;"> -->
+          <div class="col-xl-4 col-md-5 pt-4 mt-4 col-lg-4 col-12 full-img">
+            <div class="twilight align-self-center pt-5 mt-5">Login Up to
+              Your Details
+            </div>
+            <h6 class="align-self-center pt-3" style="font-size: 18px;">If you already have an account </h6>
+            <h6 class="align-self-center " style="font-size: 18px;">You can <span style="color:#F1647B">Login here
+                !</span>
+            </h6>
+          </div>
+          <div class="col-xl-8 col-lg-8 col-md-7 col-12 d-flex">
+            <img src="../../../assets/images/Rocket 1.png" class="align-self-center ">
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-6 col-md-8 col-sm-10 mx-auto">
+        <h1 class="twilight">Login</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="mb-4">
+            <label class="form-label text-color ">Email </label>
+            <input type="email" placeholder="Enter the e-mail" class="form-control form-class" formControlName="email"
+              [ngClass]="{ 'is-invalid': submitted && validate.email.errors }" id="name">
+            <div *ngIf="submitted && validate.email.errors" class="invalid-feedback" style="color: red;">
+              <div *ngIf="validate.email.errors.required">Email is required*</div>
+              <div *ngIf="validate.email.errors.email">Email must be a valid email address</div>
+            </div>
+          </div>
+          <div class="mb-4 pt-2">
+            <label  class="form-label text-color ">Company Name</label>
+            <input type="text" placeholder="Enter the Company Name" class="form-class  form-control"
+              formControlName="company" [ngClass]="{ 'is-invalid': submitted && validate.company.errors }" id="company">
+
+            <div *ngIf="submitted && validate.company.errors" class="invalid-feedback" style="color: red;">
+              <div *ngIf="validate.company.errors.required"> Company Name is required*</div>
+            </div>
+          </div>
+          <div class="mb-4  pt-2">
+            <label class="form-label text-color">Phone Number</label>
+
+            <input type="tel" placeholder="Enter the Phone Number" (keypress)="numberOnly($event)"
+              class="form-class form-control" formControlName="phoneNumber"
+              [ngClass]="{ 'is-invalid': submitted && validate.phoneNumber.errors }" id="contacts">
+
+            <div *ngIf="submitted && validate.phoneNumber.errors" class="invalid-feedback" style="color: red;">
+              <div *ngIf="validate.phoneNumber.errors.required">Phone Numberis required*</div>
+            </div>
+          </div>
+          <!-- <div class="mb-4   pt-2 form-check  d-flex justify-content-between">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" [ngClass]="{ 'is-invalid': submitted && validate.checkbox.errors }" style="color: #A9A9A9;">
+            <label class="form-check-label " for="flexCheckDefault" style="color: #A9A9A9;">Agree To Terms &
+              Conditions</label>
+          </div> -->
+          <div class="mb-3 ml-4">
+            <input type="checkbox" formControlName="checkbox" class="form-check-input " id="exampleCheck1" style="color: #A9A9A9;"
+              [ngClass]="{ 'is-invalid': submitted && validate.checkbox.errors }">
+            <label class="form-check-label text" for="flexCheckDefault">
+              Agree To Terms & Conditions</label>
+          </div>
+          <!-- <div class="mb-3 ml-4">
+            <input class="form-check-input form-checkbox" type="checkbox" formControlName="checkbox" [ngClass]="{ 'is-invalid': submitted && validate.checkbox.errors }">
+            <label class="form-check-label" for="flexCheckDefault">
+              Agree To Terms & Conditions</label>
+        </div> -->
+          <div class="mb-4 pt-2">
+            <button type="submit" style="background-color: #F1647B;border: none;"
+              class="w-full btn text-white form">Login</button>
+          </div>
+        </form>
+        <div class="form-text  py-3" style="color: #A9A9A9;">
+          <p class="divider-text"><span class="bg-light">Or Continue With</span></p>
+          <div class="row justify-content-center">
+            <div class="col-auto p-1">
+
+            </div>
+            <div class="col-auto p-1">
+              <a href="#" class="btn btn-round">
+                <img src="../../../assets/images/Group 237461.png" />
+              </a>
+            </div>
+            <div class="col-auto p-1">
+              <a href="#" class="btn btn-round">
+                <img src="../../../assets/images/Frame.png" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
