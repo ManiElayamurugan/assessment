@@ -1,4 +1,4 @@
-<nb-layout>
+<!-- <nb-layout>
   <nb-layout-column class="bg-stone-900">
     <div class="flex justify-center items-center " style="height:95vh;">
       <nb-card class="w-full md:w-[70%] lg:w-[60%] xl:w-[40%] 2xl:w-[40%] ">
@@ -9,6 +9,7 @@
               (ngModelChange)="onSearchChange($event)" placeholder="Search" />
             <nb-icon nbPrefix [icon]="'search-outline'" pack="eva"></nb-icon>
           </nb-form-field>
+
           <nb-list class="mt-4 w-full cursor-pointer" (click)="showQuestions()">
             <nb-list-item *ngFor="let item of items" class="border-2 my-4">
               - {{ item.name }}
@@ -18,4 +19,40 @@
       </nb-card>
     </div>
   </nb-layout-column>
-</nb-layout>
+</nb-layout> -->
+
+
+
+<header>
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top bg-white p-4 shadow p-3 mb-5 bg-white rounded">
+    <div class="container-fluid">
+      <div class="row w-100">
+        <div class="col-xl-10 mx-auto">
+          <img src="../../../assets/images/header_logo.svg" style="cursor:pointer;" alt="">
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="row m-0" style="position: relative; top: 145px;" (click)="onEdit()">
+  <div class="col-xl-10 mx-auto">
+    <div class="row">
+      <div class="col-xl-6">
+        <p class="font-bold" style="font-size: 30px;">Choose an Assessment to begin</p>
+        <div class="row mt-4">
+          <div class="col-12 mb-4 d-flex justify-content-start" *ngFor="let item of items">
+            <button class="btn-block" style="height: 172px; width: 419px;" (click)="showQuestions(item.name)">
+              <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+                <img [src]="item.img">
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6">
+       <img src="../../../assets/images/AWS bg.svg" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>

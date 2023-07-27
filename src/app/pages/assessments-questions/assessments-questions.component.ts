@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AssessmentService } from '../service/assessment.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-assessments-questions',
@@ -17,7 +18,10 @@ export class AssessmentsQuestionsComponent implements OnInit {
   innerText: any;
   showContent?: boolean = false;
 
-  constructor(private assessmentService: AssessmentService) { }
+  constructor(private assessmentService: AssessmentService,
+    private route: ActivatedRoute) {
+    console.log('this.route.queryParams', this.route.queryParams)
+  }
 
   ngOnInit(): void {
     this.getAssessmentList();
@@ -39,21 +43,21 @@ export class AssessmentsQuestionsComponent implements OnInit {
     this.currentQuestionIndex++
     this.showContent = false
   }
-  onCheck(event: any){
-console.log('++++++++',event)
-this.innerText  = event.target.innerText
-console.log('-------', this.innerText)
-if(this.innerText != ''){
-  this.showContent = true;
-}
+  onCheck(event: any) {
+    console.log('++++++++', event)
+    this.innerText = event.target.innerText
+    console.log('-------', this.innerText)
+    if (this.innerText != '') {
+      this.showContent = true;
+    }
   }
   previousQuestion() {
     if (this.currentQuestionIndex > 0) {
       this.currentQuestionIndex--;
     }
   }
-  restart(){
+  restart() {
     this.currentQuestionIndex = 0;
-    this.selectedOption 
+    this.selectedOption
   }
 }

@@ -1,0 +1,19 @@
+.selectedClr {
+  opacity: 0.4; 
+  pointer-events: none;
+}
+.selectedClear{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fix-div{
+  height:60px;
+  color: #838080;
+  font-size : 20px;
+  cursor:pointer;
+}
+
+.selected {
+  color: #1C1C1C;
+}

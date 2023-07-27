@@ -1,4 +1,4 @@
-<nb-layout>
+<!-- <nb-layout>
   <nb-layout-column class="bg-stone-900">
     <div class="flex justify-center items-center " style="height:95vh;">
       <nb-card class="w-full md:w-[70%] lg:w-[60%] xl:w-[40%] 2xl:w-[40%] ">
@@ -18,4 +18,51 @@
       </nb-card>
     </div>
   </nb-layout-column>
-</nb-layout>
+</nb-layout> -->
+
+
+<header>
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top bg-white p-4 shadow p-3 mb-5 bg-white rounded">
+    <div class="container-fluid">
+      <div class="row w-100">
+        <div class="col-xl-10 mx-auto">
+          <img src="../../../assets/images/header_logo.svg" style="cursor:pointer;" alt="">
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="container-fluid">
+  <div class="row m-0" style="position: relative; top: 145px;">
+    <div class="col-xl-10 mx-auto">
+      <div class="row d-flex justify-content-start">
+            <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let item of items">
+              <div [ngClass]="active === item.name ? '' : 'selectedClr'">
+                <button style="height: 172px; width: 419px;"   
+                (click)="showQuestions(item.name)">
+                  <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+                    <img [src]="item.img">
+                  </div>
+                </button>
+              </div>
+            </div>
+          
+            <div class="d-flex mt-4 mb-4">
+              <p class="" style="opacity: 0.6; font-size: 30px; font-weight: 400;">{{active? active : selectedItem}} ></p> 
+              <p *ngIf="selectedSubItem" class="my-2 text-space ps-2 mb-1 mt-0" style="color:#F1647B;font-size: 30px;font-weight: 500;">{{ selectedSubItem.name }}</p>
+            </div>
+            <div class="card" style="width: 419px;">
+              <div class="card-body">
+        <div class="set-padding">
+          <div class="fix-div" *ngFor="let create of showItems" (click)="onSelectItem(create)" [ngClass]="{ 'selected': create == selectedSubItem }">
+            <p class="text-space" style="padding-top: 28px; font-weight: 400;">
+              {{create.name}}</p>
+          </div>
+        </div>
+      </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>

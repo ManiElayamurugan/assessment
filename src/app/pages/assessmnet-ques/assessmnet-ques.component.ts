@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AssessmentService } from '../service/assessment.service';
 
 @Component({
   selector: 'app-assessmnet-ques',
@@ -8,14 +9,61 @@ import { Router } from '@angular/router';
 })
 export class AssessmnetQuesComponent  implements OnInit{
   searchText?: string;
-  items?: { name: string; }[];
+  items?: { img: string; name:string} [];
+  showItems? :{name:string} []
+  selectedItem?: any;
+  itemsSelectedName?: string;
+  show?: boolean = false;
+  active
+  selectedName: any;
+  selectedSubItem: any;
 
-  constructor(private router: Router) {
+  
+  constructor(private router: Router, private api: AssessmentService, private route: ActivatedRoute) {
+    console.log('+++++++++++++++++++++++++', this.route.snapshot.queryParams)
+    this.active =  this.route.snapshot.queryParams['selectedService']
+    console.log(' this.active--', this.active);
+    
+    this.items = [
+      {
+        img: '../../../assets/images/AWS.svg',
+        name:'AWS'
+      }, 
+      {
+        img: '../../../assets/images/Azure.svg',
+        name:'Azure'
+      }, 
+      {
+        img: '../../../assets/images/GCP.svg',
+        name:'GCP'
+      }
+   ];
+
+   this.items.forEach((item)=>{
+    this.itemsSelectedName = item.name;
+    console.log('this.itemsSelectedName',this.itemsSelectedName)
+   })
 
   }
 
+  
+  showQuestions(selectedItem: string): void {
+    this.selectedItem = selectedItem;
+    this.show = true;
+    this.router.navigate(['/questions']);
+  }
+  
+
   ngOnInit(): void {
-    this.items = [
+    this.api.sendData.subscribe(res=>{
+      this.selectedItem = res;
+      console.log('selectedItem',this.selectedItem);  
+      if(this.selectedItem) {
+     this.show = true
+     console.log('showww++++0', this.show)
+      }
+    })
+    this.showItems =[
       {
         name: 'Security Governance',
       }, 
@@ -45,19 +93,9 @@ export class AssessmnetQuesComponent  implements OnInit{
       },
    ];
    }
-   showQuestions(){
-    this.router.navigate(['/questions']);
-    console.log('++++++++++',this.router);
+   onSelectItem(item:any){
+    this.selectedSubItem = item;
+
    }
-  
-   onSearchChange(searchText: string) {
-    const keyword = new RegExp(searchText, 'gi');
-    if (searchText != '') {
-      this.items = this.items?.filter((i) => {
-        return i.name.match(keyword);
-      });
-    }else{
-      this.ngOnInit()
-    }
-  }
+
 }
