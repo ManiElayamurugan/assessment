@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AssessmentService } from '../service/assessment.service';
+import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-assessmnet-ques',
@@ -28,6 +29,7 @@ export class AssessmnetQuesComponent  implements OnInit{
       {
         img: '../../../assets/images/AWS.svg',
         name:'AWS'
+       
       }, 
       {
         img: '../../../assets/images/Azure.svg',
