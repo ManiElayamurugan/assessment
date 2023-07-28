@@ -1,0 +1,67 @@
+ <!-- <div class="flex justify-center items-center" style="height: 95vh;">
+      <nb-card class="w-full md:w-[70%] lg:w-[60%] xl:w-[40%] 2xl:w-[40%]">
+        <div class="flex flex-col justify-center items-center leading-loose w-full p-6 bg-white rounded-lg shadow-2xl h-[365px] overflow-y-auto">
+          <div *ngIf="currentQuestionIndex !== undefined">
+            <div *ngFor="let item of assessmentListArray">
+              <p>{{ item?.title }}</p>
+              <div *ngFor="let option of item?.options">
+                <div *ngIf="item.settings?.multiple == false">
+                  <nb-radio [value]="option?.code" (click)="selectedOption = option?.code" (click)="onCheck($event)">{{ option?.code }}</nb-radio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nb-card-footer class="bg-white" *ngIf="currentQuestionIndex !== undefined">
+          <div class="row">
+            <div class="col-12 flex justify-end">
+              <button>
+                <img src="../../../assets/images/restart.png" class="img-fluid" (click)="restart()">
+
+              </button>
+              <button type="submit" size="medium" class="mx-3 float-end" nbButton (click)="previousQuestion()" style="width: 90px">Perv</button>
+              <button type="submit" size="medium" class="float-end" nbButton (click)="nextQuestion()" status="info" [disabled]="!showContent">
+                Next
+              </button>
+            </div>
+          </div>
+        </nb-card-footer>
+      </nb-card>
+    </div> -->
+
+    <div class="card shadow mb-5" style="border: none;">
+        <div class="card-body">
+            <div *ngIf="currentQuestionIndex !== undefined">
+                <div *ngFor="let item of assessmentListArray">
+                  <hr style="border-color: #c7c7c7;">
+                  <p class="ml-4" style="font-size: 20px; font-weight: 500; color: black; font-family: Roboto;">{{ item?.title }}</p>
+                  <div *ngFor="let option of item?.options">
+                    <div *ngIf="item.settings?.multiple === false">
+                      <input class="ml-4"
+                        type="radio"
+                        [value]="option?.code"
+                        [(ngModel)]="item.selectedOption"
+                        (change)="onCheck(item)"
+                        [name]="'question_' + item.title" >
+                      <span [ngStyle]="{ 'font-size': '18px', 'font-weight': item.selectedOption === option?.code ? '500' : '400' }" class="ml-3" style="font-family: Roboto; line-height: 57.5px;">
+                        {{ option?.code }}
+                      </span>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+        </div>
+
+<footer class="text-center text-lg-start bg-white text-muted">
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <div class="me-5 d-none d-lg-block">
+      </div>
+<div>
+      <button type="button" class="mx-3 float-end" (click)="previousQuestion()" style="width: 152px;height: 50px;font-size: 18px;border-radius: 10px; background-color:#F1647B; color: white;">Save</button>
+      <button type="button" class="float-end" (click)="nextQuestion()" status="info" [disabled]="!showContent"style="width: 152px;height: 50px;font-size: 18px;border-radius: 10px; background-color:#EFEFEF; color: #626262;">
+        Reset
+      </button>
+</div>
+    </section>
+  </footer>
+    </div>

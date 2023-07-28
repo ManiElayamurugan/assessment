@@ -94,6 +94,9 @@ export class AssessmnetQuesComponent  implements OnInit{
         name: 'Application Security', 
       },
    ];
+   if (this.showItems && this.showItems.length > 0) {
+    this.selectedSubItem = this.showItems[0];
+  }
    }
    onSelectItem(item:any){
     this.selectedSubItem = item;

@@ -4,7 +4,7 @@
       <nb-card class="w-full md:w-[70%] lg:w-[60%] xl:w-[40%] 2xl:w-[40%]">
         <div class="flex flex-col justify-center items-center leading-loose w-full p-6 bg-white rounded-lg shadow-2xl h-[365px] overflow-y-auto">
           <div *ngIf="currentQuestionIndex !== undefined">
-            <div *ngFor="let item of [assessmentListArray[currentQuestionIndex]]">
+            <div *ngFor="let item of assessmentListArray">
               <p>{{ item?.title }}</p>
               <div *ngFor="let option of item?.options">
                 <div *ngIf="item.settings?.multiple == false">

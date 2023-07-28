@@ -22,7 +22,7 @@
 
 
 <header>
-  <nav class="navbar navbar-expand-xl navbar-light fixed-top bg-white p-4 shadow p-3 mb-5 bg-white rounded">
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top bg-white p-4 shadow p-3 bg-white rounded">
     <div class="container-fluid">
       <div class="row w-100">
         <div class="col-xl-10 mx-auto">
@@ -33,35 +33,47 @@
   </nav>
 </header>
 
+
 <div class="container-fluid">
-  <div class="row m-0" style="position: relative; top: 145px;">
+  <div class="row m-0" style="position: relative; top: 155px;">
     <div class="col-xl-10 mx-auto">
       <div class="row d-flex justify-content-start">
-            <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let item of items">
-              <div class="card shadow " [ngClass]="active === item.name ? 'activeCard' : 'selectedClr'" style="border-radius: 30px;">
-                <button style="height: 172px; "    
-                (click)="showQuestions(item.name)">
-                  <div class="d-flex justify-content-center align-items-center" >
-                    <img [src]="item.img">
-                  </div>
-                </button>
+        <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let item of items">
+          <div class="card shadow " [ngClass]="active === item.name ? 'activeCard' : 'selectedClr'" style="border-radius: 30px;">
+            <button style="height: 172px; " (click)="showQuestions(item.name)">
+              <div class="d-flex justify-content-center align-items-center">
+                <img [src]="item.img">
               </div>
-            </div>
-          
-            <div class="d-flex mt-4 mb-4">
-              <p class="" style="opacity: 0.6; font-size: 30px; font-weight: 400;">{{active? active : selectedItem}} ></p> 
-              <p *ngIf="selectedSubItem" class="my-2 text-space ps-2 mb-1 mt-0" style="color:#F1647B;font-size: 30px;font-weight: 500;">{{ selectedSubItem.name }}</p>
-            </div>
-            <div class="card shadow mb-5" style="width: 419px;border: none;">
-              <div class="card-body">
-        <div class="set-padding">
-          <div class="fix-div" *ngFor="let create of showItems" (click)="onSelectItem(create)" [ngClass]="{ 'selected': create == selectedSubItem }">
-            <p class="text-space" style="padding-top: 25px; font-weight: 400;">
-              {{create.name}}</p>
+            </button>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="row m-0" style="position: relative; top: 170px;">
+    <div class="col-xl-10 mx-auto">
+      <div class="row">
+        <div class="col-xl-5">
+          <div class="d-flex mt-4 mb-4">
+            <p class="" style="opacity: 0.6; font-size: 30px; font-weight: 400;">{{active? active : selectedItem}} ></p> 
+            <p *ngIf="selectedSubItem" class="my-2 text-space ps-2 mb-1 mt-0" style="color:#F1647B;font-size: 30px;font-weight: 500;">{{ selectedSubItem.name }}</p>
+          </div>
+          <div class="card shadow mb-5" style="border: none;">
+            <div class="card-body">
+              <div class="set-padding" style="line-height: 57.5px;">
+                <div class="fix-div" *ngFor="let create of showItems" (click)="onSelectItem(create)" [ngClass]="{ 'selected': create == selectedSubItem }">
+                  <p class="text-space ml-4">
+                    {{create.name}}
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+        <div class="col-xl-7 mt-4 mt-xl-0" style="position: relative; top: 110px;">
+          <app-assessment-final></app-assessment-final>
+        </div>
       </div>
     </div>
   </div>

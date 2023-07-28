@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { AssessmentComponent } from './assessment/assessment.component';
 import { AssessmentsQuestionsComponent } from './assessments-questions/assessments-questions.component';
 import { AssessmnetQuesComponent } from './assessmnet-ques/assessmnet-ques.component';
+import { AssessmentFinalComponent } from './assessment-final/assessment-final.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path:'assess-ques',
     component:AssessmnetQuesComponent
+  },
+  {
+    path:'assessment-final',
+    component:AssessmentFinalComponent
   }
 ];
 
