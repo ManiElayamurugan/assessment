@@ -36,9 +36,9 @@
 
 <div class="container-fluid">
   <div class="row m-0" style="position: relative; top: 155px;">
-    <div class="col-xl-10 mx-auto">
+    <div class="col-xl-10 col-md-12 mx-auto">
       <div class="row d-flex justify-content-start">
-        <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let item of items">
+        <div class="col-lg-4 col-md-4 col-sm-12" *ngFor="let item of items">
           <div class="card shadow " [ngClass]="active === item.name ? 'activeCard' : 'selectedClr'" style="border-radius: 30px;">
             <button style="height: 172px; " (click)="showQuestions(item.name)">
               <div class="d-flex justify-content-center align-items-center">

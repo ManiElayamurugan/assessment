@@ -2,12 +2,40 @@
     font-weight: 600;
     font-size: 40px;
 }
-.full-img{
-    background-image: url('../../../assets/images/Background.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+@media (min-width: 2560px) {
+    .twilight {
+      font-size: 70px; /* Adjust the font size as needed for 2560 resolution */
+    }
+    .login{
+        font-size:32px !important;
+    }
+    .text-field{
+        font-size: 22px;
+    }
+    .check{
+        height: 25px;
+        width: 23px;
+        // color: #A9A9A9;
+    }
+    .check-box{
+        padding-left: 13px;
+    }
+  }
+  .details{
+    font-size: 18px;
+  }
+// .full-img{
+//     background-image: url('../../../assets/images/Background.png');
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
+// .custom-bg {
+//     background-image: url('../../../assets/images/Background.png');
+//     background-size: cover;
+//     background-position: center;
+//     /* Add other background properties if needed */
+//   }
 .form-class{
     background-color: #F6F6F6;
     border:none;
@@ -15,8 +43,7 @@
 .divider-text {
     position: relative;
     text-align: center;
-    // margin-top: 15px;
-    // margin-bottom: 15px;
+   
 }
 .divider-text span {
     padding: 7px;
@@ -33,23 +60,7 @@
     left: 0;
     z-index: 1;
 }
-// .input-with-icon {
-//     position: relative;
-//   }
-  
-//   .form-control {
-//     padding-right: 40px; /* Adjust padding to create space for the image */
-//     background-image: none; /* Clear default background image */
-//   }
-  
-//   .input-icon {
-//     position: absolute;
-//     top: 50%;
-//     right: 10px;
-//     transform: translateY(-50%);
-//     width: 20px; /* Adjust the width of the image */
-//     height: 20px; /* Adjust the height of the image */
-//   }
+
   
 #name {
     // / width: 308px; /
