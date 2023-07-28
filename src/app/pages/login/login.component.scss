@@ -2,7 +2,7 @@
     font-weight: 600;
     font-size: 40px;
     font-family: 'Poppins';
-    max-width: 244px;
+    // max-width: 244px;
     line-height: 65px;
 }
 // @media (min-width: 2560px) {
@@ -27,19 +27,19 @@
   .details{
     font-size: 18px;
   }
-@media (max-width:767px){
-    .twilight{
-        position: relative;
-        top: 50px;
-        font-size: 25px;
-        line-height: 40px;
-    }
-    .details{
-        position: relative;
-        top: 40px; 
-        line-height: 30px !important;
-    }
-}
+// @media (max-width:767px){
+//     .twilight{
+//         position: relative;
+//         top: 50px;
+//         font-size: 25px;
+//         line-height: 40px;
+//     }
+//     .details{
+//         position: relative;
+//         top: 40px; 
+//         line-height: 30px !important;
+//     }
+// }
 // .full-img{
 //     background-image: url('../../../assets/images/Background.png');
 //     background-position: center;
@@ -107,3 +107,19 @@
 .text-color {
 color:#595959;
 }
+@media (max-width: 767px) {
+    .twilight {
+        font-size: 30px;
+        padding-top: 48px;
+    }
+   
+    /* Adjust other styles for mobile screens here */
+    .text-field {
+      max-width: 100%;
+    }
+    
+    .btn {
+      font-size: 18px;
+      height: 40px;
+    }
+  }
