@@ -39,7 +39,8 @@
     <div class="col-xl-10 col-md-12 mx-auto">
       <div class="row d-flex justify-content-start">
         <div class="col-lg-4 col-md-4 col-sm-12" *ngFor="let item of items">
-          <div class="card shadow " [ngClass]="active === item.name ? 'activeCard' : 'selectedClr'" style="border-radius: 30px;">
+          <div class="card shadow " [ngClass]="active === item.name ? 'activeCard' : 'selectedClr'"
+            style="border-radius: 30px;">
             <button style="height: 172px; " (click)="showQuestions(item.name)">
               <div class="d-flex justify-content-center align-items-center">
                 <img [src]="item.img">
@@ -50,19 +51,27 @@
       </div>
     </div>
   </div>
+  <div class="row m-0">
+    <div class="col-xl-10 mx-auto">
+      <div class="d-flex" style="position: relative;padding-top: 210px;">
+        <p class="" style="opacity: 0.6; font-size: 30px; font-weight: 400;">{{active? active : selectedItem}} ></p>
+        <p *ngIf="selectedSubItem" class="my-2 text-space ps-2 mb-1 mt-0"
+          style="color:#F1647B;font-size: 30px;font-weight: 500;">{{
+          selectedSubItem.name }}</p>
+      </div>
+    </div>
+  </div>
 
-  <div class="row m-0" style="position: relative; top: 170px;">
+  <div class="row m-0 pt-4">
     <div class="col-xl-10 mx-auto">
       <div class="row">
-        <div class="col-xl-5">
-          <div class="d-flex mt-4 mb-4">
-            <p class="" style="opacity: 0.6; font-size: 30px; font-weight: 400;">{{active? active : selectedItem}} ></p> 
-            <p *ngIf="selectedSubItem" class="my-2 text-space ps-2 mb-1 mt-0" style="color:#F1647B;font-size: 30px;font-weight: 500;">{{ selectedSubItem.name }}</p>
-          </div>
+        <div class="col-xl-4">
+
           <div class="card shadow mb-5" style="border: none;">
             <div class="card-body">
               <div class="set-padding" style="line-height: 57.5px;">
-                <div class="fix-div" *ngFor="let create of showItems" (click)="onSelectItem(create)" [ngClass]="{ 'selected': create == selectedSubItem }">
+                <div class="fix-div" *ngFor="let create of showItems" (click)="onSelectItem(create)"
+                  [ngClass]="{ 'selected': create == selectedSubItem }">
                   <p class="text-space ml-4">
                     {{create.name}}
                   </p>
@@ -71,7 +80,10 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-7 mt-4 mt-xl-0" style="position: relative; top: 110px;">
+        <div class="col-xl-1">
+          
+        </div>
+        <div class="col-xl-7 mt-4 mt-xl-0" >
           <app-assessment-final></app-assessment-final>
         </div>
       </div>
