@@ -12,6 +12,7 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AssessmentsQuestionsComponent } from './assessments-questions/assessments-questions.component';
 import { AssessmnetQuesComponent } from './assessmnet-ques/assessmnet-ques.component';
 import { AssessmentFinalComponent } from './assessment-final/assessment-final.component';
+import { MatStepperModule } from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AssessmentFinalComponent } from './assessment-final/assessment-final.co
   ],
   imports: [
     CommonModule,
+    MatStepperModule,
     FormsModule,
     PagesRoutingModule,
     ReactiveFormsModule,

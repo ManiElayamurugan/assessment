@@ -17,6 +17,7 @@ export class AssessmentFinalComponent {
   selectedOption?: false;
   innerText: any;
   showContent?: boolean = false;
+  currentStepIndex = 0;
 
   constructor(private assessmentService: AssessmentService,
     private route: ActivatedRoute) {
@@ -33,7 +34,9 @@ export class AssessmentFinalComponent {
       console.log('this.assessmentData', this.assessmentData);
       this.assessmentData?.forEach((item: any) => {
         this.assessmentList = item
+        console.log('item',item);
         this.assessmentListArray.push(this.assessmentList)
+        console.log('assssssssssssss',this.assessmentListArray);
         console.log('list', this.assessmentListArray);
       })
     })
@@ -59,5 +62,10 @@ export class AssessmentFinalComponent {
   restart() {
     this.currentQuestionIndex = 0;
     this.selectedOption
+  }
+   moveToNextStep() {
+    if (this.currentStepIndex < this.assessmentListArray.length - 1) {
+      this.currentStepIndex++;
+    }
   }
 }

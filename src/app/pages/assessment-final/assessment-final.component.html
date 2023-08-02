@@ -30,26 +30,29 @@
     </div> -->
 
 
-  
-    <div *ngIf="currentQuestionIndex !== undefined">
-      <div class="card shadow mb-4" style="border: none;" *ngFor="let item of assessmentListArray; let i = index">
-        <div class="card-body">
-        <p class="ml-4" style="font-size: 20px; font-weight: 500; color: black; font-family: Roboto;">{{ item?.title }}
-        </p>
-        <div *ngFor="let option of item?.options">
-          <div *ngIf="item.settings?.multiple === false">
-            <input class="ml-4" type="radio" [value]="option?.code" [(ngModel)]="item.selectedOption"
-              (change)="onCheck(item)" [name]="'question_' + item.title">
-            <span
-              [ngStyle]="{ 'font-size': '18px', 'font-weight': item.selectedOption === option?.code ? '500' : '400' }"
-              class="ml-3" style="font-family: Roboto; line-height: 57.5px;">
-              {{ option?.code }}
-            </span>
+    <mat-vertical-stepper [selectedIndex]="currentStepIndex">
+      <mat-step *ngFor="let item of assessmentListArray; let i = index">
+        <ng-template matStepLabel>{{ item?.title }}</ng-template>
+        <div class="card shadow mb-4" style="border: none;">
+          <div class="card-body">
+            <p class="ml-4" style="font-size: 20px; font-weight: 500; color: black; font-family: Roboto;">{{ item?.title }}</p>
+            <div *ngFor="let option of item?.options">
+              <div *ngIf="item.settings?.multiple === false">
+                <input class="ml-4" type="radio" [value]="option?.code" [(ngModel)]="item.selectedOption"
+                       (change)="onCheck(item); moveToNextStep()"
+                       [name]="'question_' + i"> 
+                <span [ngStyle]="{ 'font-size': '18px', 'font-weight': item.selectedOption === option?.code ? '500' : '400' }"
+                      class="ml-3" style="font-family: Roboto; line-height: 57.5px;">
+                  {{ option?.code }}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </mat-step>
+    </mat-vertical-stepper>
+    
+    
 
   <footer class="text-center text-lg-start bg-white text-muted">
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
