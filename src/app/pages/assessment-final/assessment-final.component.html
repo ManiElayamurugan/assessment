@@ -29,11 +29,11 @@
       </nb-card>
     </div> -->
 
-<div class="card shadow mb-5" style="border: none;">
-  <div class="card-body">
+
+  
     <div *ngIf="currentQuestionIndex !== undefined">
-      <div *ngFor="let item of assessmentListArray">
-        <hr style="border-color: #c7c7c7;">
+      <div class="card shadow mb-4" style="border: none;" *ngFor="let item of assessmentListArray; let i = index">
+        <div class="card-body">
         <p class="ml-4" style="font-size: 20px; font-weight: 500; color: black; font-family: Roboto;">{{ item?.title }}
         </p>
         <div *ngFor="let option of item?.options">
@@ -56,13 +56,12 @@
       <div class="me-5 d-none d-lg-block">
       </div>
       <div>
-        <button type="button" class="mx-3 float-end" (click)="previousQuestion()"
-          style="width: 152px;height: 50px;font-size: 18px;border-radius: 10px; background-color:#F1647B; color: white;">Save</button>
-        <button type="button" class="mx-3 float-end" (click)="nextQuestion()" status="info" [disabled]="!showContent"
+        <button type="button" class="mx-3 float-end" 
+          style="width: 152px;height: 50px;font-size: 18px;border-radius: 10px; background-color:#F1647B; color: white;" (click)="nextQuestion()">Save</button>
+        <button type="button" class="mx-3 float-end" (click)="previousQuestion()" status="info"
           style="width: 152px;height: 50px;font-size: 18px;border-radius: 10px; background-color:#EFEFEF; color: #626262;">
           Reset
         </button>
       </div>
     </section>
   </footer>
-</div>
